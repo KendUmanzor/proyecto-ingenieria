@@ -30,3 +30,21 @@ exports.buscarPersonaPorId = async (req, res) => {
     res.status(500).json({ message: "Error al buscar persona" });
   }
 };
+
+// Actualizar persona
+exports.actualizarPersona = async (req, res) => {
+  try {
+    console.log("DNI recibido:", req.params.dni); 
+    const persona = await Personas.findOne({ where: { DNI: req.params.dni } });
+    if (!persona) {
+      return res.status(404).json({ message: "Persona no encontrada" });
+    }
+
+    await persona.update(req.body);
+    res.json({ message: "Persona actualizada correctamente", persona });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error al actualizar persona" });
+  }
+};

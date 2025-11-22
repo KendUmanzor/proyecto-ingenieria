@@ -18,6 +18,7 @@ const Vehiculos = require("./vehiculos")(sequelize, DataTypes);
 const Marcas = require("./marcas")(sequelize, DataTypes);
 const Modelos = require("./modelos")(sequelize, DataTypes);
 const Colores = require("./colores")(sequelize, DataTypes);
+const Visitas = require("./visitas")(sequelize, DataTypes);
 
 // Definir relaciones
 Estudiantes.belongsTo(Personas, { foreignKey: "Id_persona" });
@@ -27,7 +28,8 @@ Vehiculos.belongsTo(Personas, { foreignKey: "Id_persona" });
 Vehiculos.belongsTo(Modelos, { foreignKey: "Id_modelo" });
 Vehiculos.belongsTo(Colores, { foreignKey: "Color" });
 Modelos.belongsTo(Marcas, { foreignKey: "Id_marca" });
-
+Visitas.belongsTo(Personas, { foreignKey: "Id_persona" });
+Personas.hasOne(Empleados, { foreignKey: 'Id_persona' });
 // Exportar modelos y conexión
 module.exports = {
   sequelize,
@@ -39,4 +41,5 @@ module.exports = {
   Marcas,
   Modelos,
   Colores,
+  Visitas
 };

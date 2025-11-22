@@ -9,6 +9,7 @@ const empleadosRoutes = require("./routes/Empleadosroutes");
 const ingresosRoutes = require("./routes/Ingresosroutes");
 const vehiculosRoutes = require("./routes/Vehiculosroutes");
 const referenciasRoutes = require("./routes/Referenciasroutes");
+const visitasRoutes = require("./routes/Visitasroutes");
 
 app.set("port", 3000)
 
@@ -21,13 +22,14 @@ app.get("/",(req,res)=>{
 }   
 )
 
+
 app.use("/personas", personasRoutes);
 app.use("/estudiantes", estudiantesRoutes);
 app.use("/empleados", empleadosRoutes);
 app.use("/ingresos", ingresosRoutes);
 app.use("/vehiculos", vehiculosRoutes);
 app.use("/referencias", referenciasRoutes);
-
+app.use("/visitas", visitasRoutes);
 
 app.listen(app.get("port"), () => {
     console.log(`server en el puerto ${app.get("port")}`)
