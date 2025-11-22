@@ -12,16 +12,12 @@ const referenciasRoutes = require("./routes/Referenciasroutes");
 const visitasRoutes = require("./routes/Visitasroutes");
 
 app.set("port", 3000)
-
-//middles   
 app.use(express.json());  
 app.use(express.static(path.join(__dirname,"public")))
-
 app.get("/",(req,res)=>{
     res.send("hola mundo")
 }   
 )
-
 
 app.use("/personas", personasRoutes);
 app.use("/estudiantes", estudiantesRoutes);
