@@ -2,12 +2,12 @@ const express = require("express");  // Importa la librería de Express
 const router = express.Router();  // Crea una nueva instancia del enrutador de Express
 const vehiculosController = require("../controllers/Vehiculocontroller");  // Importa el controlador de vehículos
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 router.post("/", vehiculosController.registrarVehiculo);  // POST /vehiculos
 router.get("/persona/:dni", vehiculosController.listarVehiculosPorPersona);  // GET /vehiculos/persona/:idPersona
 router.get("/vehiculos", vehiculosController.listarVehiculos);
 router.get("/vehiculos/matricula/:matricula", vehiculosController.buscarVehiculoPorMatricula);
-=======
+//=======
 // Endpoint para registrar un vehículo
 // Ruta: POST /vehiculos
 // Este endpoint recibe los datos de un nuevo vehículo y lo registra en la base de datos
@@ -22,5 +22,5 @@ router.post("/", vehiculosController.registrarVehiculo);  // Método POST, usa e
 router.get("/persona/:idPersona", vehiculosController.listarVehiculosPorPersona);  // Método GET, usa el controlador `listarVehiculosPorPersona`
 
 // Exportamos las rutas para que puedan ser utilizadas en el archivo principal (index.js)
->>>>>>> 633d5fe (Valores en la API de acuerdo al front)
+//>>>>>>> 633d5fe (Valores en la API de acuerdo al front)
 module.exports = router;
