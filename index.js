@@ -3,6 +3,7 @@ const app = express()
 const path = require ("path")
 const Sequelize = require("./models");
 
+
 const personasRoutes = require("./routes/Personasroutes");
 const estudiantesRoutes = require("./routes/Estudiantesroutes");
 const empleadosRoutes = require("./routes/Empleadosroutes");
