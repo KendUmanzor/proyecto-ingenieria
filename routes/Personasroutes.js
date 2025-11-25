@@ -14,12 +14,12 @@ router.get("/", personasController.listarPersonas);
 
 // Endpoint para buscar una persona por su DNI (GET)
 router.get("/:dni", personasController.buscarPersonaPorId);
-<<<<<<< HEAD
+//<<<<<<< HEAD
 router.put("/cambiar/:dni", personasController.actualizarPersona);
-=======
+//=======
 // Ruta ejemplo: GET http://localhost:3000/personas/0209200300876
 // Este endpoint devuelve los datos de una persona en base a su DNI (usando un parámetro dinámico :dni).
 // Por ejemplo, puedes usar el DNI "0209200300876" como parámetro para obtener la persona correspondiente.
 
->>>>>>> 633d5fe (Valores en la API de acuerdo al front)
+//>>>>>>> 633d5fe (Valores en la API de acuerdo al front)
 module.exports = router;
