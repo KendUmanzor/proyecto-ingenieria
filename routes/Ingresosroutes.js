@@ -2,12 +2,12 @@ const express = require("express");  // Importa la librería de Express
 const router = express.Router();  // Crea una nueva instancia del enrutador de Express
 const ingresosController = require("../controllers/Ingresocontroller");  // Importa el controlador de ingresos
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 router.post("/", ingresosController.registrarIngreso);  // POST /ingresos
 //router.get("/persona/:idPersona", ingresosController.listarIngresosPorPersona);  // GET /ingresos/persona/:idPersona
 router.get("/", ingresosController.listarIngresos);
 router.get("/dni/:dni", ingresosController.buscarIngresosPorDNI);
-=======
+
 // Endpoint para registrar un ingreso
 // Ruta: POST /ingresos
 // Este endpoint recibe los datos de un nuevo ingreso y lo registra en la base de datos
@@ -22,5 +22,5 @@ router.post("/", ingresosController.registrarIngreso);  // Método POST, usa el 
 router.get("/persona/:idPersona", ingresosController.listarIngresosPorPersona);  // Método GET, usa el controlador `listarIngresosPorPersona`
 
 // Exportamos el enrutador para que pueda ser utilizado en el archivo principal (index.js)
->>>>>>> 633d5fe (Valores en la API de acuerdo al front)
+//>>>>>>> 633d5fe (Valores en la API de acuerdo al front)
 module.exports = router;
